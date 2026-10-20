@@ -390,7 +390,7 @@
             this.Name = "ucSachTacGia";
             this.Padding = new System.Windows.Forms.Padding(12);
             this.Size = new System.Drawing.Size(1840, 1120);
-            this.Load += new System.EventHandler(this.ucTheLoai_Load);
+            this.Load += new System.EventHandler(this.ucSachTacGia_Load);
             this.pnlDataDG.ResumeLayout(false);
             this.pnlDataDG.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);

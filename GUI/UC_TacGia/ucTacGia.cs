@@ -16,7 +16,6 @@ namespace QLTV.GUI.UC_TacGia
         {
             InitializeComponent();
         }
-
         private void ucTacGia_Load(object sender, EventArgs e)
         {
             dgvTacGia.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9.0F, FontStyle.Bold);

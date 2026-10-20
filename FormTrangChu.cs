@@ -136,7 +136,6 @@ namespace QLTV
             ucTacGia uc = new ucTacGia();
             HienThiUserControl(uc);
         }
-
         private void btnSachTG_Click(object sender, EventArgs e)
         {
             ucSachTacGia uc = new ucSachTacGia();

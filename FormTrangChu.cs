@@ -29,11 +29,19 @@ namespace QLTV
         {
             InitializeComponent();
         }
+
         private void FormTrangChu_Load(object sender, EventArgs e)
         {
-            lblUser.Text = Session.HoTen;
+            lblUser.Text = "Xin chào, " + Session.HoTen;
             lblChucVu.Text = Session.ChucVu;
-
+            if (Session.ChucVu == "Nhân viên" || Session.ChucVu == "NhanVien") 
+            {
+                btnQLTKNV.Visible = false; // Ẩn nút Quản lý tài khoản
+            }
+            else
+            {
+                btnQLTKNV.Visible = true;  // Hiện đầy đủ nếu là Admin
+            }
             this.Location = new Point(40, 20);
             this.Size = new Size(1200, 720);
 
@@ -67,7 +75,7 @@ namespace QLTV
             }
             else
             {
-                Environment.Exit(0);
+                Application.ExitThread();
             }
         }
         public void HienThiUserControl(UserControl uc)

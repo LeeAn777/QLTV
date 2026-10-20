@@ -18,7 +18,7 @@ namespace QLTV
             InitializeComponent();
         }
         private void FormDangNhap_Load(object sender, EventArgs e)
-        {
+        {   
             this.AcceptButton = btnDangNhap;
             txtTaiKhoan.Focus();
         }

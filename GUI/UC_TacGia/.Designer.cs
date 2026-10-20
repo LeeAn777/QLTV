@@ -33,11 +33,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucTacGia));
             this.pnl2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvTacGia = new System.Windows.Forms.DataGridView();
-            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colQuocTich = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -62,6 +57,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pnl1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colQuocTich = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTacGia)).BeginInit();
             this.guna2Panel4.SuspendLayout();
@@ -102,8 +102,8 @@
             this.dgvTacGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvTacGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSTT,
-            this.colMaTG,
-            this.colTenTG,
+            this.colMaTacGia,
+            this.colTenTacGia,
             this.colNgaySinh,
             this.colQuocTich});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -124,49 +124,6 @@
             this.dgvTacGia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTacGia.Size = new System.Drawing.Size(1787, 488);
             this.dgvTacGia.TabIndex = 8;
-            // 
-            // colSTT
-            // 
-            this.colSTT.FillWeight = 12.08459F;
-            this.colSTT.HeaderText = "STT";
-            this.colSTT.MinimumWidth = 10;
-            this.colSTT.Name = "colSTT";
-            this.colSTT.ReadOnly = true;
-            this.colSTT.Width = 22;
-            // 
-            // colMaTG
-            // 
-            this.colMaTG.FillWeight = 78.36274F;
-            this.colMaTG.HeaderText = "Mã tác giả";
-            this.colMaTG.MinimumWidth = 10;
-            this.colMaTG.Name = "colMaTG";
-            this.colMaTG.ReadOnly = true;
-            this.colMaTG.Width = 139;
-            // 
-            // colTenTG
-            // 
-            this.colTenTG.FillWeight = 209.5527F;
-            this.colTenTG.HeaderText = "Tên tác giả";
-            this.colTenTG.MinimumWidth = 10;
-            this.colTenTG.Name = "colTenTG";
-            this.colTenTG.ReadOnly = true;
-            this.colTenTG.Width = 374;
-            // 
-            // colNgaySinh
-            // 
-            this.colNgaySinh.HeaderText = "Ngày sinh";
-            this.colNgaySinh.MinimumWidth = 10;
-            this.colNgaySinh.Name = "colNgaySinh";
-            this.colNgaySinh.ReadOnly = true;
-            this.colNgaySinh.Width = 179;
-            // 
-            // colQuocTich
-            // 
-            this.colQuocTich.HeaderText = "Quốc tịch";
-            this.colQuocTich.MinimumWidth = 10;
-            this.colQuocTich.Name = "colQuocTich";
-            this.colQuocTich.ReadOnly = true;
-            this.colQuocTich.Width = 179;
             // 
             // guna2Panel4
             // 
@@ -540,6 +497,46 @@
             this.guna2DateTimePicker1.TabIndex = 32;
             this.guna2DateTimePicker1.Value = new System.DateTime(2026, 10, 18, 10, 39, 47, 535);
             // 
+            // colSTT
+            // 
+            this.colSTT.HeaderText = "STT";
+            this.colSTT.MinimumWidth = 10;
+            this.colSTT.Name = "colSTT";
+            this.colSTT.ReadOnly = true;
+            this.colSTT.Width = 200;
+            // 
+            // colMaTacGia
+            // 
+            this.colMaTacGia.HeaderText = "Mã tác giả";
+            this.colMaTacGia.MinimumWidth = 10;
+            this.colMaTacGia.Name = "colMaTacGia";
+            this.colMaTacGia.ReadOnly = true;
+            this.colMaTacGia.Width = 200;
+            // 
+            // colTenTacGia
+            // 
+            this.colTenTacGia.HeaderText = "Tên tác giả";
+            this.colTenTacGia.MinimumWidth = 10;
+            this.colTenTacGia.Name = "colTenTacGia";
+            this.colTenTacGia.ReadOnly = true;
+            this.colTenTacGia.Width = 200;
+            // 
+            // colNgaySinh
+            // 
+            this.colNgaySinh.HeaderText = "Ngày sinh";
+            this.colNgaySinh.MinimumWidth = 10;
+            this.colNgaySinh.Name = "colNgaySinh";
+            this.colNgaySinh.ReadOnly = true;
+            this.colNgaySinh.Width = 200;
+            // 
+            // colQuocTich
+            // 
+            this.colQuocTich.HeaderText = "Quốc tịch";
+            this.colQuocTich.MinimumWidth = 10;
+            this.colQuocTich.Name = "colQuocTich";
+            this.colQuocTich.ReadOnly = true;
+            this.colQuocTich.Width = 200;
+            // 
             // ucTacGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -591,11 +588,11 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Panel pnl1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSTT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaTG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTenTG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaTacGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenTacGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn colQuocTich;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
     }
 }

@@ -1,0 +1,5 @@
+Các tính năng chính: Quản lý sách, Độc giả, Mượn/Trả sách, Tiền phạt, Thống kê xu hướng, Phân quyền tài khoản.
+
+Tài khoản dùng thử: admin / 1 (Admin) hoặc b / 2 (Thủ thư).
+
+Hướng dẫn chạy: Chạy file QLThuVien.sql trước, sau đó mở file .sln bằng Visual Studio và đổi connString.

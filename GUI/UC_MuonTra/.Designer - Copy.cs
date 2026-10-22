@@ -34,12 +34,6 @@
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.pnl2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvPhieuTra = new System.Windows.Forms.DataGridView();
-            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaPhieuTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaPhieuMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -55,16 +49,22 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMaPhieuTra = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTenDocGia = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pnl1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cboNhanVien = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cboMaPhieuMuon = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpNgayTra = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaPhieuMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaPhieutra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuTra)).BeginInit();
             this.guna2Panel4.SuspendLayout();
@@ -116,6 +116,7 @@
             // 
             // dgvPhieuTra
             // 
+            this.dgvPhieuTra.AllowUserToAddRows = false;
             this.dgvPhieuTra.AllowUserToResizeColumns = false;
             this.dgvPhieuTra.AllowUserToResizeRows = false;
             this.dgvPhieuTra.BackgroundColor = System.Drawing.Color.White;
@@ -131,8 +132,8 @@
             this.dgvPhieuTra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPhieuTra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSTT,
-            this.colMaPhieuTra,
             this.colMaPhieuMuon,
+            this.colMaPhieutra,
             this.colMaNV,
             this.colTenNV,
             this.colNgayTra});
@@ -155,57 +156,8 @@
             this.dgvPhieuTra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPhieuTra.Size = new System.Drawing.Size(1787, 451);
             this.dgvPhieuTra.TabIndex = 8;
-            // 
-            // colSTT
-            // 
-            this.colSTT.FillWeight = 12.08459F;
-            this.colSTT.HeaderText = "STT";
-            this.colSTT.MinimumWidth = 10;
-            this.colSTT.Name = "colSTT";
-            this.colSTT.ReadOnly = true;
-            this.colSTT.Width = 22;
-            // 
-            // colMaPhieuTra
-            // 
-            this.colMaPhieuTra.FillWeight = 78.36274F;
-            this.colMaPhieuTra.HeaderText = "Mã phiếu trả";
-            this.colMaPhieuTra.MinimumWidth = 10;
-            this.colMaPhieuTra.Name = "colMaPhieuTra";
-            this.colMaPhieuTra.ReadOnly = true;
-            this.colMaPhieuTra.Width = 139;
-            // 
-            // colMaPhieuMuon
-            // 
-            this.colMaPhieuMuon.FillWeight = 209.5527F;
-            this.colMaPhieuMuon.HeaderText = "Mã phiếu mượn";
-            this.colMaPhieuMuon.MinimumWidth = 10;
-            this.colMaPhieuMuon.Name = "colMaPhieuMuon";
-            this.colMaPhieuMuon.ReadOnly = true;
-            this.colMaPhieuMuon.Width = 374;
-            // 
-            // colMaNV
-            // 
-            this.colMaNV.HeaderText = "Mã nhân viên";
-            this.colMaNV.MinimumWidth = 10;
-            this.colMaNV.Name = "colMaNV";
-            this.colMaNV.ReadOnly = true;
-            this.colMaNV.Width = 200;
-            // 
-            // colTenNV
-            // 
-            this.colTenNV.HeaderText = "Tên nhân viên";
-            this.colTenNV.MinimumWidth = 10;
-            this.colTenNV.Name = "colTenNV";
-            this.colTenNV.ReadOnly = true;
-            this.colTenNV.Width = 200;
-            // 
-            // colNgayTra
-            // 
-            this.colNgayTra.HeaderText = "Ngày trả";
-            this.colNgayTra.MinimumWidth = 10;
-            this.colNgayTra.Name = "colNgayTra";
-            this.colNgayTra.ReadOnly = true;
-            this.colNgayTra.Width = 179;
+            this.dgvPhieuTra.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuTra_CellClick_1);
+            this.dgvPhieuTra.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvPhieuTra_RowPostPaint);
             // 
             // guna2Panel4
             // 
@@ -257,6 +209,7 @@
             this.guna2Button3.Size = new System.Drawing.Size(180, 50);
             this.guna2Button3.TabIndex = 3;
             this.guna2Button3.Text = "Làm mới";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click_1);
             // 
             // guna2Button1
             // 
@@ -273,6 +226,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(180, 50);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Tìm kiếm";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click_1);
             // 
             // txtTimKiem
             // 
@@ -317,6 +271,7 @@
             this.guna2Button7.Size = new System.Drawing.Size(250, 60);
             this.guna2Button7.TabIndex = 18;
             this.guna2Button7.Text = "Xóa phiếu";
+            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click_1);
             // 
             // guna2Button2
             // 
@@ -339,6 +294,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(250, 60);
             this.guna2Button2.TabIndex = 2;
             this.guna2Button2.Text = "Sửa phiếu";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click_1);
             // 
             // label6
             // 
@@ -382,6 +338,7 @@
             this.guna2Button4.Size = new System.Drawing.Size(250, 60);
             this.guna2Button4.TabIndex = 4;
             this.guna2Button4.Text = "Tạo phiếu mới";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click_1);
             // 
             // label12
             // 
@@ -428,65 +385,47 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Lập phiếu trả mới";
             // 
-            // guna2TextBox1
+            // txtMaPhieuTra
             // 
-            this.guna2TextBox1.BorderRadius = 5;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(435, 78);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(354, 45);
-            this.guna2TextBox1.TabIndex = 0;
+            this.txtMaPhieuTra.BorderRadius = 5;
+            this.txtMaPhieuTra.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaPhieuTra.DefaultText = "";
+            this.txtMaPhieuTra.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaPhieuTra.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaPhieuTra.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaPhieuTra.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaPhieuTra.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaPhieuTra.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMaPhieuTra.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaPhieuTra.Location = new System.Drawing.Point(435, 150);
+            this.txtMaPhieuTra.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtMaPhieuTra.Name = "txtMaPhieuTra";
+            this.txtMaPhieuTra.PlaceholderText = "Tự động sinh";
+            this.txtMaPhieuTra.ReadOnly = true;
+            this.txtMaPhieuTra.SelectedText = "";
+            this.txtMaPhieuTra.Size = new System.Drawing.Size(354, 45);
+            this.txtMaPhieuTra.TabIndex = 14;
             // 
-            // guna2TextBox3
+            // txtTenDocGia
             // 
-            this.guna2TextBox3.BorderRadius = 5;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(435, 150);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(354, 45);
-            this.guna2TextBox3.TabIndex = 14;
-            // 
-            // guna2TextBox5
-            // 
-            this.guna2TextBox5.BorderRadius = 5;
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Location = new System.Drawing.Point(1143, 78);
-            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PlaceholderText = "Nhập tên ĐG";
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(354, 45);
-            this.guna2TextBox5.TabIndex = 20;
+            this.txtTenDocGia.BorderRadius = 5;
+            this.txtTenDocGia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenDocGia.DefaultText = "";
+            this.txtTenDocGia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenDocGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenDocGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenDocGia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenDocGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenDocGia.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenDocGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenDocGia.Location = new System.Drawing.Point(1143, 78);
+            this.txtTenDocGia.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtTenDocGia.Name = "txtTenDocGia";
+            this.txtTenDocGia.PlaceholderText = "";
+            this.txtTenDocGia.ReadOnly = true;
+            this.txtTenDocGia.SelectedText = "";
+            this.txtTenDocGia.Size = new System.Drawing.Size(354, 45);
+            this.txtTenDocGia.TabIndex = 20;
             // 
             // label2
             // 
@@ -511,15 +450,15 @@
             this.pnl1.BackColor = System.Drawing.Color.Transparent;
             this.pnl1.BorderColor = System.Drawing.Color.Black;
             this.pnl1.BorderRadius = 10;
+            this.pnl1.Controls.Add(this.cboNhanVien);
+            this.pnl1.Controls.Add(this.cboMaPhieuMuon);
             this.pnl1.Controls.Add(this.guna2Button5);
-            this.pnl1.Controls.Add(this.guna2TextBox2);
             this.pnl1.Controls.Add(this.label1);
-            this.pnl1.Controls.Add(this.guna2DateTimePicker1);
+            this.pnl1.Controls.Add(this.dtpNgayTra);
             this.pnl1.Controls.Add(this.label5);
             this.pnl1.Controls.Add(this.label2);
-            this.pnl1.Controls.Add(this.guna2TextBox5);
-            this.pnl1.Controls.Add(this.guna2TextBox3);
-            this.pnl1.Controls.Add(this.guna2TextBox1);
+            this.pnl1.Controls.Add(this.txtTenDocGia);
+            this.pnl1.Controls.Add(this.txtMaPhieuTra);
             this.pnl1.Controls.Add(this.guna2Button4);
             this.pnl1.Controls.Add(this.guna2Panel1);
             this.pnl1.Controls.Add(this.label12);
@@ -531,6 +470,41 @@
             this.pnl1.Name = "pnl1";
             this.pnl1.Size = new System.Drawing.Size(1828, 332);
             this.pnl1.TabIndex = 1;
+            // 
+            // cboNhanVien
+            // 
+            this.cboNhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.cboNhanVien.BorderRadius = 5;
+            this.cboNhanVien.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboNhanVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboNhanVien.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboNhanVien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboNhanVien.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cboNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboNhanVien.IntegralHeight = false;
+            this.cboNhanVien.ItemHeight = 20;
+            this.cboNhanVien.Location = new System.Drawing.Point(1143, 150);
+            this.cboNhanVien.Name = "cboNhanVien";
+            this.cboNhanVien.Size = new System.Drawing.Size(354, 26);
+            this.cboNhanVien.TabIndex = 37;
+            // 
+            // cboMaPhieuMuon
+            // 
+            this.cboMaPhieuMuon.BackColor = System.Drawing.Color.Transparent;
+            this.cboMaPhieuMuon.BorderRadius = 5;
+            this.cboMaPhieuMuon.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboMaPhieuMuon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMaPhieuMuon.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboMaPhieuMuon.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboMaPhieuMuon.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cboMaPhieuMuon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboMaPhieuMuon.IntegralHeight = false;
+            this.cboMaPhieuMuon.ItemHeight = 20;
+            this.cboMaPhieuMuon.Location = new System.Drawing.Point(435, 66);
+            this.cboMaPhieuMuon.Name = "cboMaPhieuMuon";
+            this.cboMaPhieuMuon.Size = new System.Drawing.Size(354, 26);
+            this.cboMaPhieuMuon.TabIndex = 36;
+            this.cboMaPhieuMuon.SelectedValueChanged += new System.EventHandler(this.cboMaPhieuMuon_SelectedValueChanged);
             // 
             // guna2Button5
             // 
@@ -548,26 +522,7 @@
             this.guna2Button5.Size = new System.Drawing.Size(252, 60);
             this.guna2Button5.TabIndex = 35;
             this.guna2Button5.Text = "Hủy";
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.BorderRadius = 5;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(1143, 150);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PlaceholderText = "Nhập tên NV";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(354, 45);
-            this.guna2TextBox2.TabIndex = 34;
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click_1);
             // 
             // label1
             // 
@@ -578,21 +533,77 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Nhân viên nhận";
             // 
-            // guna2DateTimePicker1
+            // dtpNgayTra
             // 
-            this.guna2DateTimePicker1.BorderRadius = 5;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(680, 247);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(354, 45);
-            this.guna2DateTimePicker1.TabIndex = 32;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2026, 10, 18, 10, 39, 47, 535);
+            this.dtpNgayTra.BorderRadius = 5;
+            this.dtpNgayTra.Checked = true;
+            this.dtpNgayTra.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayTra.FillColor = System.Drawing.Color.White;
+            this.dtpNgayTra.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpNgayTra.Location = new System.Drawing.Point(680, 247);
+            this.dtpNgayTra.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpNgayTra.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpNgayTra.Name = "dtpNgayTra";
+            this.dtpNgayTra.Size = new System.Drawing.Size(354, 45);
+            this.dtpNgayTra.TabIndex = 32;
+            this.dtpNgayTra.Value = new System.DateTime(2026, 10, 18, 10, 39, 47, 535);
+            // 
+            // colSTT
+            // 
+            this.colSTT.FillWeight = 12.08459F;
+            this.colSTT.HeaderText = "STT";
+            this.colSTT.MinimumWidth = 10;
+            this.colSTT.Name = "colSTT";
+            this.colSTT.ReadOnly = true;
+            this.colSTT.Width = 40;
+            // 
+            // colMaPhieuMuon
+            // 
+            this.colMaPhieuMuon.DataPropertyName = "MaPhieuMuon";
+            this.colMaPhieuMuon.FillWeight = 78.36274F;
+            this.colMaPhieuMuon.HeaderText = "Mã phiếu mượn";
+            this.colMaPhieuMuon.MinimumWidth = 10;
+            this.colMaPhieuMuon.Name = "colMaPhieuMuon";
+            this.colMaPhieuMuon.ReadOnly = true;
+            this.colMaPhieuMuon.Width = 200;
+            // 
+            // colMaPhieutra
+            // 
+            this.colMaPhieutra.DataPropertyName = "MaPhieuTra";
+            this.colMaPhieutra.FillWeight = 209.5527F;
+            this.colMaPhieutra.HeaderText = "Mã phiếu trả";
+            this.colMaPhieutra.MinimumWidth = 10;
+            this.colMaPhieutra.Name = "colMaPhieutra";
+            this.colMaPhieutra.ReadOnly = true;
+            this.colMaPhieutra.Width = 200;
+            // 
+            // colMaNV
+            // 
+            this.colMaNV.DataPropertyName = "MaNV";
+            this.colMaNV.HeaderText = "Mã nhân viên";
+            this.colMaNV.MinimumWidth = 10;
+            this.colMaNV.Name = "colMaNV";
+            this.colMaNV.ReadOnly = true;
+            this.colMaNV.Width = 200;
+            // 
+            // colTenNV
+            // 
+            this.colTenNV.DataPropertyName = "TenNV";
+            this.colTenNV.HeaderText = "Tên nhân viên";
+            this.colTenNV.MinimumWidth = 10;
+            this.colTenNV.Name = "colTenNV";
+            this.colTenNV.ReadOnly = true;
+            this.colTenNV.Width = 300;
+            // 
+            // colNgayTra
+            // 
+            this.colNgayTra.DataPropertyName = "NgayTra";
+            this.colNgayTra.HeaderText = "Ngày trả";
+            this.colNgayTra.MinimumWidth = 10;
+            this.colNgayTra.Name = "colNgayTra";
+            this.colNgayTra.ReadOnly = true;
+            this.colNgayTra.Width = 150;
             // 
             // ucPhieuTra
             // 
@@ -637,20 +648,20 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txtMaPhieuTra;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenDocGia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Panel pnl1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgayTra;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2ComboBox cboNhanVien;
+        private Guna.UI2.WinForms.Guna2ComboBox cboMaPhieuMuon;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSTT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaPhieuTra;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaPhieuMuon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaPhieutra;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNgayTra;

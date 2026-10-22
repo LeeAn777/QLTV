@@ -34,7 +34,6 @@
             this.btnTrangChu = new Guna.UI2.WinForms.Guna2Button();
             this.btnQLTKNV = new Guna.UI2.WinForms.Guna2Button();
             this.btnXuHuong = new Guna.UI2.WinForms.Guna2Button();
-            this.btnTienPhat = new Guna.UI2.WinForms.Guna2Button();
             this.btnQLSach = new Guna.UI2.WinForms.Guna2Button();
             this.btnPhieuTraSach = new Guna.UI2.WinForms.Guna2Button();
             this.btnTTNV = new Guna.UI2.WinForms.Guna2Button();
@@ -84,7 +83,6 @@
             this.pnlChucNang.Controls.Add(this.btnTrangChu);
             this.pnlChucNang.Controls.Add(this.btnQLTKNV);
             this.pnlChucNang.Controls.Add(this.btnXuHuong);
-            this.pnlChucNang.Controls.Add(this.btnTienPhat);
             this.pnlChucNang.Controls.Add(this.btnQLSach);
             this.pnlChucNang.Controls.Add(this.btnPhieuTraSach);
             this.pnlChucNang.Controls.Add(this.btnTTNV);
@@ -151,7 +149,7 @@
             this.btnQLTKNV.HoverState.ForeColor = System.Drawing.Color.Lime;
             this.btnQLTKNV.Image = ((System.Drawing.Image)(resources.GetObject("btnQLTKNV.Image")));
             this.btnQLTKNV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnQLTKNV.Location = new System.Drawing.Point(10, 980);
+            this.btnQLTKNV.Location = new System.Drawing.Point(10, 910);
             this.btnQLTKNV.Name = "btnQLTKNV";
             this.btnQLTKNV.PressedColor = System.Drawing.Color.Transparent;
             this.btnQLTKNV.Size = new System.Drawing.Size(437, 50);
@@ -178,7 +176,7 @@
             this.btnXuHuong.HoverState.ForeColor = System.Drawing.Color.Lime;
             this.btnXuHuong.Image = ((System.Drawing.Image)(resources.GetObject("btnXuHuong.Image")));
             this.btnXuHuong.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnXuHuong.Location = new System.Drawing.Point(10, 910);
+            this.btnXuHuong.Location = new System.Drawing.Point(10, 840);
             this.btnXuHuong.Name = "btnXuHuong";
             this.btnXuHuong.PressedColor = System.Drawing.Color.Transparent;
             this.btnXuHuong.Size = new System.Drawing.Size(365, 50);
@@ -187,33 +185,6 @@
             this.btnXuHuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnXuHuong.TextOffset = new System.Drawing.Point(12, 0);
             this.btnXuHuong.Click += new System.EventHandler(this.btnXuHuong_Click);
-            // 
-            // btnTienPhat
-            // 
-            this.btnTienPhat.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnTienPhat.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnTienPhat.CheckedState.ForeColor = System.Drawing.Color.Lime;
-            this.btnTienPhat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTienPhat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTienPhat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTienPhat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTienPhat.FillColor = System.Drawing.Color.Transparent;
-            this.btnTienPhat.FocusedColor = System.Drawing.Color.Transparent;
-            this.btnTienPhat.Font = new System.Drawing.Font("Segoe UI", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTienPhat.ForeColor = System.Drawing.Color.White;
-            this.btnTienPhat.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnTienPhat.HoverState.ForeColor = System.Drawing.Color.Lime;
-            this.btnTienPhat.Image = ((System.Drawing.Image)(resources.GetObject("btnTienPhat.Image")));
-            this.btnTienPhat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTienPhat.Location = new System.Drawing.Point(10, 840);
-            this.btnTienPhat.Name = "btnTienPhat";
-            this.btnTienPhat.PressedColor = System.Drawing.Color.Transparent;
-            this.btnTienPhat.Size = new System.Drawing.Size(365, 50);
-            this.btnTienPhat.TabIndex = 16;
-            this.btnTienPhat.Text = "Tiền phạt ";
-            this.btnTienPhat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTienPhat.TextOffset = new System.Drawing.Point(12, 0);
-            this.btnTienPhat.Click += new System.EventHandler(this.btnTienPhat_Click);
             // 
             // btnQLSach
             // 
@@ -523,10 +494,11 @@
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.BackColor = System.Drawing.Color.Transparent;
-            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.White;
             this.lblUser.Location = new System.Drawing.Point(95, 28);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(185, 37);
+            this.lblUser.Size = new System.Drawing.Size(197, 37);
             this.lblUser.TabIndex = 5;
             this.lblUser.Text = "Nguyễn Văn A";
             // 
@@ -535,6 +507,7 @@
             this.lblChucVu.AutoSize = true;
             this.lblChucVu.BackColor = System.Drawing.Color.Transparent;
             this.lblChucVu.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChucVu.ForeColor = System.Drawing.Color.White;
             this.lblChucVu.Location = new System.Drawing.Point(97, 68);
             this.lblChucVu.Name = "lblChucVu";
             this.lblChucVu.Size = new System.Drawing.Size(133, 30);
@@ -685,7 +658,6 @@
         private Guna.UI2.WinForms.Guna2Button btnThongTinDG;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel pnlChucNang;
         private Guna.UI2.WinForms.Guna2Button btnXuHuong;
-        private Guna.UI2.WinForms.Guna2Button btnTienPhat;
         private Guna.UI2.WinForms.Guna2Button btnQLTKNV;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picAvatar;
         private System.Windows.Forms.Label lblChucVu;

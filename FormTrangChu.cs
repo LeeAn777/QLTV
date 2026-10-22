@@ -6,7 +6,6 @@ using QLTV.GUI.UC_Nhanvien;
 using QLTV.GUI.UC_TacGia;
 using QLTV.GUI.UC_MuonTra;
 using QLTV.GUI.UC_XuHuong;
-using QLTV.GUI.UC_TienPhat;
 using QLTV.GUI.UC_HeThong;
 using System;
 using System.Collections.Generic;
@@ -159,11 +158,6 @@ namespace QLTV
         private void btnPhieuTraSach_Click(object sender, EventArgs e)
         {
             ucPhieuTra uc = new ucPhieuTra();
-            HienThiUserControl(uc);
-        }
-        private void btnTienPhat_Click(object sender, EventArgs e)
-        {
-            ucTienPhat uc = new ucTienPhat();
             HienThiUserControl(uc);
         }
         private void btnXuHuong_Click(object sender, EventArgs e)

@@ -18,19 +18,18 @@ namespace QLTV
             Application.SetCompatibleTextRenderingDefault(false);
             while (true)
             {
-                using (FormDangNhap frmLogin = new FormDangNhap())
+                FormDangNhap frmLogin = new FormDangNhap();
+                if (frmLogin.ShowDialog() == DialogResult.OK)
                 {
-                    if (frmLogin.ShowDialog() != DialogResult.OK)
-                    {
-                        break;
-                    }
-                }
-                using (FormTrangChu frmMain = new FormTrangChu())
-                {
+                    frmLogin.Dispose();
+                    FormTrangChu frmMain = new FormTrangChu();
                     Application.Run(frmMain);
+                }
+                else
+                {
+                    break;
                 }
             }
         }
-        
     }
 }

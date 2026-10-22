@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Security;
@@ -13,6 +14,7 @@ namespace QLTV
 {
     public partial class FormDangNhap : Form
     {
+        private readonly string connString = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLThuVien;Integrated Security=True";
         public FormDangNhap()
         {
             InitializeComponent();
@@ -45,28 +47,56 @@ namespace QLTV
                 txtMatKhau.Focus(); 
                 return;
             }
-            if (taiKhoan == "admin" && matKhau == "1")
+            try
             {
-                Session.MaNV = "ADMIN";
-                Session.HoTen = "Nguyễn Văn A";
-                Session.ChucVu = "Quản Trị Viên";
-                lblThongBaoLoi.Visible = false;
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                using (SqlConnection conn = new SqlConnection(connString))
+                {
+                    conn.Open();
+
+                    // TRUY VẤN: Lấy thông tin tài khoản kết hợp tên nhân viên từ bảng nhanvien
+                    string sql = @"SELECT tk.MaNV, nv.HoTen, tk.Quyen, tk.TrangThai 
+                                   FROM dbo.taikhoannhanvien tk 
+                                   INNER JOIN dbo.nhanvien nv ON tk.MaNV = nv.MaNV 
+                                   WHERE tk.TenDangNhap = @TaiKhoan AND tk.MatKhau = @MatKhau";
+
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@TaiKhoan", taiKhoan);
+                        cmd.Parameters.AddWithValue("@MatKhau", matKhau);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string trangThai = reader["TrangThai"]?.ToString();
+                                if (trangThai == "Bị khóa")
+                                {
+                                    HienThiLoi("Tài khoản của bạn hiện đang bị khóa, không thể đăng nhập!");
+                                    return;
+                                }
+
+                                // Đăng nhập thành công -> Lưu vào Session
+                                Session.MaNV = reader["MaNV"]?.ToString();
+                                Session.HoTen = reader["HoTen"]?.ToString();
+                                Session.ChucVu = reader["Quyen"]?.ToString();
+
+                                lblThongBaoLoi.Visible = false;
+                                this.DialogResult = DialogResult.OK;
+                                this.Close(); // Đóng Form Đăng nhập để chuyển sang Trang chủ
+                            }
+                            else
+                            {
+                                HienThiLoi("Tài khoản hoặc mật khẩu không chính xác!");
+                                txtMatKhau.Clear();
+                                txtMatKhau.Focus();
+                            }
+                        }
+                    }
+                }
             }
-            else if (taiKhoan == "nv01" && matKhau == "2")
+            catch (Exception ex)
             {
-                Session.MaNV = "NV01";
-                Session.HoTen = "Trần Thị B";
-                Session.ChucVu = "Nhân viên";
-                lblThongBaoLoi.Visible = false;
-                this.DialogResult = DialogResult.OK;
-            }
-            else
-            {
-                HienThiLoi("Tài khoản hoặc mật khẩu không chính xác!");
-                txtMatKhau.Clear();
-                txtMatKhau.Focus();
+                MessageBox.Show("Lỗi kết nối cơ sở dữ liệu: " + ex.Message, "Lỗi SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void HienThiLoi(string message)

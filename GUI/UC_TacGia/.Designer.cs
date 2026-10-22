@@ -87,6 +87,7 @@
             // 
             // dgvTacGia
             // 
+            this.dgvTacGia.AllowUserToAddRows = false;
             this.dgvTacGia.AllowUserToResizeColumns = false;
             this.dgvTacGia.AllowUserToResizeRows = false;
             this.dgvTacGia.BackgroundColor = System.Drawing.Color.White;
@@ -110,7 +111,7 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumSpringGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTacGia.DefaultCellStyle = dataGridViewCellStyle2;
@@ -503,7 +504,7 @@
             this.colSTT.MinimumWidth = 10;
             this.colSTT.Name = "colSTT";
             this.colSTT.ReadOnly = true;
-            this.colSTT.Width = 200;
+            this.colSTT.Width = 40;
             // 
             // colMaTacGia
             // 
@@ -511,7 +512,6 @@
             this.colMaTacGia.MinimumWidth = 10;
             this.colMaTacGia.Name = "colMaTacGia";
             this.colMaTacGia.ReadOnly = true;
-            this.colMaTacGia.Width = 200;
             // 
             // colTenTacGia
             // 
@@ -519,7 +519,7 @@
             this.colTenTacGia.MinimumWidth = 10;
             this.colTenTacGia.Name = "colTenTacGia";
             this.colTenTacGia.ReadOnly = true;
-            this.colTenTacGia.Width = 200;
+            this.colTenTacGia.Width = 295;
             // 
             // colNgaySinh
             // 
@@ -535,7 +535,7 @@
             this.colQuocTich.MinimumWidth = 10;
             this.colQuocTich.Name = "colQuocTich";
             this.colQuocTich.ReadOnly = true;
-            this.colQuocTich.Width = 200;
+            this.colQuocTich.Width = 255;
             // 
             // ucTacGia
             // 
